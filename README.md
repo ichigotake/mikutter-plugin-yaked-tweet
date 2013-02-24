@@ -15,3 +15,17 @@
 
 …ﾆﾔﾘ
 
+
+## SEE ALSO
+
+[mikutter](http://mikutter.hachune.net/)
+
+
+（ ＾ω＾）
+
+## AUTHOR
+
+[@ichigotake](https://twitter.com/ichigotake)
+
+
+(ﾉヮ=*)
