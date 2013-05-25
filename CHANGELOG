@@ -1,4 +1,11 @@
 
-== 2013-04-24 v1.1
+- v 1.2
+  - update: dictionary
+  - update: document format
 
-* Defect #3 語尾がmessageに干渉するバグを修正
+- v 1.1
+  - bug: 語尾がmessageに干渉するバグを修正 #3
+
+- v 1.0
+  - original version
+
