@@ -12,7 +12,7 @@ yaked\_tweet - 「余計な一言」プラグイン for mikutter
 
 # CONFIGURATION
 
-*yaked_tweet.rb*内の変数の中身を書き舞えると語録を増やしたり減らしたり出来るよ
+*dictionary.txt* 内のテキストからランダムに1行が余計な一言に選定されます
 
 
 …ﾆﾔﾘ

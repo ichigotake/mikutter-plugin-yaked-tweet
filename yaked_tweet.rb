@@ -9,19 +9,9 @@ class Gdk::SubPartsYakedTweet < Gdk::SubParts
 
     def initialize(*args)
         super
-        @suffix = [
-            'それと便座カバー', '※18禁',
-            '※ただしイケメンに限る', '・・・・・・・・ばか', '…ﾆﾔﾘ', 'スイーツ(笑)', '私は死んだ',
-            '(笑)', 'っ…ぁ…', '(爆)', '(ﾉヮ〃*)', '(ﾉヮ=*)',
-            '（ ＾ω＾）',  'どうせ死ぬけど', '遊びじゃないんだよおおおおおお', '・・・///',
-            'ｷﾞｬｰｰｰwwwwwww', 'ｳﾞｪｰｰｲwwwwwww', 'ワロタ', 'HAHAHAHAHAHA',
-            'ファーーーーーーーwwwwwwwwwwwwwwwww',
-            '▂▅▇█▓▒░(’ω’)░▒▓█▇▅▂うわあああああ',
-            'こんな時こそタウンページが便利なんですよ',
-            'そういえばIPS細胞というので同性の間でも子供ができるらしいです',
-            'そんなことよりおうどん食べたい',
-            'ごんお前だったのか',
-        ]
+
+        @dictionary_name = ENV['HOME'] + '/.mikutter/plugin/yaked_tweet/dictionary.txt'
+        @suffix = read_dictionary(@dictionary_name)
 
         @margin = 54 #アイコンの横幅
         if message and not helper.visible?
@@ -29,6 +19,17 @@ class Gdk::SubPartsYakedTweet < Gdk::SubParts
             helper.on_modify
             helper.signal_handler_disconnect(sid)
             false } end
+    end
+
+    def read_dictionary(file_name)
+        words = []
+        File.open(file_name) do |file|
+          while l = file.gets
+            words.push(l.to_s)
+          end
+        end
+
+        return words
     end
 
     def render(context)
